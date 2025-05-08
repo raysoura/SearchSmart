@@ -21,18 +21,17 @@ This is a simple Notes application built using **Spring Boot** and **Elasticsear
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+## 1. Clone the repository
 
-```bash
 git clone https://github.com/YOUR_USERNAME/notes-search-app.git
 cd notes-search-app
-```bash
 
-###  2. Run Elasticsearch Locally
+---
+
+## 2. Run Elasticsearch Locally
 
 Create a docker-compose.yml with the following content:
 
-```bash
 version: '3.7'
 services:
   elasticsearch:
@@ -43,30 +42,35 @@ services:
       - xpack.security.enabled=false
     ports:
       - "9200:9200"
-```bash
 
-### Start it using:
+ ### Start it using:
 docker-compose up -d
 
 ### Verify it's running:
 curl http://localhost:9200
 
-### 3. Configure the Application
+---
+
+## 3. Configure the Application
 In src/main/resources/application.properties, ensure the following:
 
 spring.elasticsearch.uris=http://localhost:9200
 server.port=8080
 
+---
+
 ### 4. Run the Application
-Use Maven to build and run:
+### Use Maven to build and run:
 mvn spring-boot:run
 
-The application will be available at:
+### The application will be available at:
 📍 http://localhost:8080
 
-APIs:
+---
 
-Add Notes
+### APIs:
+
+### Add Notes
 
 curl --location --request PUT 'http://localhost:8080/notes/' \
 --header 'Content-Type: application/json' \
@@ -76,10 +80,10 @@ curl --location --request PUT 'http://localhost:8080/notes/' \
     "content": "This is autobiograph"
 }'
 
-Get all Notes:
+### Get all Notes:
 
 curl --location 'http://localhost:8080/notes/all'
 
-Search Notes:
+### Search Notes:
 
 curl --location 'http://localhost:8080/notes/search?query=autobiograph'
