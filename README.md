@@ -26,11 +26,13 @@ This is a simple Notes application built using **Spring Boot** and **Elasticsear
 ```bash
 git clone https://github.com/YOUR_USERNAME/notes-search-app.git
 cd notes-search-app
+```bash
 
-### 2. Run Elasticsearch Locally
+###  2. Run Elasticsearch Locally
 
 Create a docker-compose.yml with the following content:
 
+```bash
 version: '3.7'
 services:
   elasticsearch:
@@ -41,6 +43,7 @@ services:
       - xpack.security.enabled=false
     ports:
       - "9200:9200"
+```bash
 
 ### Start it using:
 docker-compose up -d
