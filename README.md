@@ -73,3 +73,8 @@ curl --location 'http://localhost:8080/notes/all'
 ### Search Notes:
 
 curl --location 'http://localhost:8080/notes/search?query=autobiograph'
+
+---
+### Live Demo:
+
+https://www.loom.com/share/28b909b7cf0342489643daddb009d8ce?sid=fee6f2e0-e3b0-49d3-bca7-184e5690b2b8
