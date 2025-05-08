@@ -30,20 +30,6 @@ cd notes-search-app
 
 ## 2. Run Elasticsearch Locally
 
-Create a docker-compose.yml with the following content:
-
-version: '3.7'
-services:
-  elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.2
-    container_name: elasticsearch
-    environment:
-      - discovery.type=single-node
-      - xpack.security.enabled=false
-    ports:
-      - "9200:9200"
-
- ### Start it using:
 docker-compose up -d
 
 ### Verify it's running:
